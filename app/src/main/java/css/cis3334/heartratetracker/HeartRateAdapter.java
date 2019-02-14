@@ -56,6 +56,12 @@ public class HeartRateAdapter  extends ArrayAdapter<HeartRate> {
         TextView tvPulse=(TextView)view.findViewById(R.id.textViewPulse);
         tvPulse.setText(hr.getPulse().toString());
 
+        TextView tvRange=(TextView)view.findViewById(R.id.textViewRange);
+        tvRange.setText(hr.getRangeName());
+
+        TextView tvDescription=(TextView)view.findViewById(R.id.textViewDescription);
+        tvDescription.setText(hr.getRangeDescrtiption());
+
         return(view);
     }
 

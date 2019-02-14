@@ -39,6 +39,15 @@ public class MainActivity extends AppCompatActivity {
         hrAdapter = new HeartRateAdapter(this, R.layout.heart_rate_row, R.id.textViewPulse, heartRateList);
         hrAdapter.setDropDownViewResource(R.layout.heart_rate_row);
         lvHeartRates.setAdapter(hrAdapter);
+////////////////////////////////////////////////////////
+        hrAdapter = new HeartRateAdapter(this, R.layout.heart_rate_row, R.id.textViewRange, heartRateList);
+        hrAdapter.setDropDownViewResource(R.layout.heart_rate_row);
+        lvHeartRates.setAdapter(hrAdapter);
+
+        hrAdapter = new HeartRateAdapter(this, R.layout.heart_rate_row, R.id.textViewDescription, heartRateList);
+        hrAdapter.setDropDownViewResource(R.layout.heart_rate_row);
+        lvHeartRates.setAdapter(hrAdapter);
+//////////////////////////////////////////////////////////
 
         lvHeartRates.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
