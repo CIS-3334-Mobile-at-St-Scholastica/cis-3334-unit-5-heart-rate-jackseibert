@@ -60,7 +60,27 @@ public class HeartRateAdapter  extends ArrayAdapter<HeartRate> {
         TextView tvDescription=(TextView)view.findViewById(R.id.textViewDescription);
         tvDescription.setText(hr.getRangeDescrtiption());
 
+        if(hr.getRangeName() == "Resting"){
+            tvRange.setTextColor(ContextCompat.getColor(context, R.color.colorResting));
+        }
+        else if(hr.getRangeName() == "Moderate"){
+            tvRange.setTextColor(ContextCompat.getColor(context, R.color.colorModerate));
+        }
+        else if(hr.getRangeName() == "Endurance"){
+            tvRange.setTextColor(ContextCompat.getColor(context, R.color.colorEndurance));
+        }
+        else if(hr.getRangeName() == "Aerobic"){
+            tvRange.setTextColor(ContextCompat.getColor(context, R.color.colorAerobic));
+        }
+        else if(hr.getRangeName() == "Anaerobic"){
+            tvRange.setTextColor(ContextCompat.getColor(context, R.color.colorAnaerobic));
+        }
+        else {
+            tvRange.setTextColor(ContextCompat.getColor(context, R.color.colorRedzone));
+        }
+
         return(view);
     }
+
 
 }
